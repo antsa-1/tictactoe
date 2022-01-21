@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <Resource id="jdbc/MariaDb" type="javax.sql.DataSource">
+	JdbcDriver org.mariadb.jdbc.Driver
+	JdbcUrl jdbc:mariadb://localhost:3306/games_portal
+	JtaManaged false
+	UserName tictactoe-api
+	Password TODO password
+	validationQuery="SELECT 1"
+    validationQueryTimeout=1000
+	</Resource>
+</resources>

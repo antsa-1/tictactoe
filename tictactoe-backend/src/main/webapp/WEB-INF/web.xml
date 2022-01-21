@@ -1,0 +1,62 @@
+
+<web-app version="5.0"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+   http://xmlns.jcp.org/xml/ns/javaee/web-app_5_0.xsd">
+	<display-name>TicTacToe</display-name>
+
+	<filter>
+		<filter-name>SecurityFilter</filter-name>
+		<filter-class>com.tauhka.tictactoe.web.filter.SecurityFilter
+		</filter-class>
+	</filter>
+
+
+	<filter-mapping>
+		<filter-name>SecurityFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<error-page>
+		<error-code>404</error-code>
+		<location>/error/error.html</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/error/error.html</location>
+	</error-page>
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>restricted methods</web-resource-name>
+			<url-pattern>/*</url-pattern>
+			<http-method>OPTIONS</http-method>
+			<http-method>TRACE</http-method>
+			<http-method>PUT</http-method>
+			<http-method>PATH</http-method>
+			<http-method>DELETE</http-method>
+			<http-method>COPY</http-method>
+			<http-method>HEAD</http-method>
+			<http-method>OPTIONS</http-method>
+			<http-method>LINK</http-method>
+			<http-method>UNLINK</http-method>
+			<http-method>PURGE</http-method>
+			<http-method>LOCK</http-method>
+			<http-method>UNLOCK</http-method>
+			<http-method>PROPFIND</http-method>
+			<http-method>VIEW</http-method>
+		</web-resource-collection>
+		<auth-constraint />
+	</security-constraint>
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>allowed methods</web-resource-name>
+			<url-pattern>/*</url-pattern>
+			<http-method>POST</http-method>
+			<http-method>OPTIONS</http-method>
+			<http-method>GET</http-method>
+		</web-resource-collection>
+	</security-constraint>
+
+</web-app>
