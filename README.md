@@ -8,8 +8,19 @@
 * [Disclaimer](#disclaimer)
 * [Technical setup](#Setup)
 
-## Keywords
-WebSocket, HtmlCanvas, JavaScript with TypeScript, Vue3, vuex, Java, EJB, Dependency Injection, annotations,  MariaDB, Maven, TomEE plume 9
+## Keywords and used technologies
+Windows 10/11 64-bit,<br>
+MariaDB 10.6.3,<br>
+HeidiSQL 11.3.0.6295, <br>
+Eclipse(Version: 2021-06 (4.20.0) Build id: 20210612-2011), <br>
+TomEE plume 9.0.0-M7, <br>
+OpenJDK 16, (compiler Java 12), <br>
+Visual Studio Code (1.62),<br>
+Node v14.17.3, <br>
+Vue 3, <br>
+Vuex 4.0.2,
+Vue-router 4.0.11, <br>
+Vue-cli: @vue/cli 4.5.15
 
 ## Project goals
 
