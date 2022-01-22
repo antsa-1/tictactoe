@@ -8,7 +8,7 @@
 * [Disclaimer](#disclaimer)
 * [Technical setup](#Setup)
 
-## Keywords and used technologies
+## Keywords, used technologies and software
 Windows 10/11 64-bit,<br>
 MariaDB 10.6.3,<br>
 HeidiSQL 11.3.0.6295, <br>
@@ -24,13 +24,13 @@ Vue-cli: @vue/cli 4.5.15
 
 ## Project goals
 
-**Frontend:** 
-Study html canvas using Vue wrapper with TypeScript. Using .vue files. 
-**Backend:** 
-Study new backend server and what is going on with latest Java versions.
-**Database:** 
-Create simple SQL-based database to backup the gaming.
-**Have some fun!**
+**Frontend:** <br>
+Study html canvas using Vue wrapper with TypeScript. Using .vue files. <br>
+**Backend:** <br>
+Study new backend server and what is going on with latest Java versions.<br>
+**Database:** <br>
+Create simple SQL-based database to backup the gaming. Check password storing in database.<br>
+**Have some fun!**<br>
 
 ## Architecture
 
@@ -84,23 +84,23 @@ Big steps:
 3.4 Click play link and check WebSocket connection is opened ws://localhost:8081/tictactoe/ws <br>
 
 4. Setup UI dev env if required to change UI. Sections 1-3 are required to be done before to get backend services working.
-  4.1 UI tries to get services from backend server created in section 2. <br>
-  4.2 Run "npm install" to get packages from folder where package.json is located. Consider installing globally with -g. <br>
-  4.3 Find .env.local file -> set VUE_APP_API_BASE_URL and VUE_APP_WS_URL corresponding where backend services are configured. <br>
-       For example: http://localhost:8081  and websocket ws://localhost:8081/tictactoe/ws <br>
-  4.3.1 Backend should give "CORS-headers" accordingly, browser makes http OPTIONS call since port 8080!=8081
+	4.1 UI tries to get services from backend server created in section 2. <br>
+  	4.2 Run "npm install" to get packages from folder where package.json is located. Consider installing globally with -g. <br>
+  	4.3 Find .env.local file -> set VUE_APP_API_BASE_URL and VUE_APP_WS_URL corresponding where backend services are configured. <br>
+         For example: http://localhost:8081  and websocket ws://localhost:8081/tictactoe/ws <br>
+  	4.3.1 Backend should give "CORS-headers" accordingly, browser makes http OPTIONS call since port 8080!=8081 <br>
   
   4.4 Run "npm run serve -o" to start dev server. Vue-App runs default at http://localhost:8080/ (note port) <br>
-  4.5 Since Now running UI in port 8080 -> Backend given cors headers do not match. Find Constants.java file
+  4.5 Since Now running UI in port 8080 -> Backend given cors headers do not match. Find Constants.java file <br>
       In Eclipse, click ctrl+shift+T -> Type Constants.java and select one from TicTacToe project.
-	  Change variable to WEBSOCKET_LOCALHOST_ORIGIN = "http://localhost:8080"; note the port 8080. Restart backend server.
-  4.6 Make wanted changes -> For example Home.vue texts changes.
-  4.7 To build package in order to use it prod environment run "npm run build --prod". Copy created Dist folder contents
+	  Change variable to WEBSOCKET_LOCALHOST_ORIGIN = "http://localhost:8080"; note the port 8080. Restart backend server. <br>
+  4.6 Make wanted changes -> For example Home.vue texts changes.<br>
+  4.7 To build package in order to use it prod environment run "npm run build --prod". Copy created Dist folder contents <br>
 	  to Eclipse Portal-project and delete old/unnecessery UI-files.
 
-5. Prod deployment from Eclipse: 
-	5.1 Select portal-project ->  File -> Export -> war-file. Check contents inside .war file are in correct places. 
-	5.2 Select tictactoe-project >  File -> Export -> war-file. Check contents inside .war file are in correct places.
+5. Prod deployment from Eclipse: <br>
+	5.1 Select portal-project ->  File -> Export -> war-file. Check contents inside .war file are in correct places. <br>
+	5.2 Select tictactoe-project >  File -> Export -> war-file. Check contents inside .war file are in correct places.<br>
 	5.3 Double check inner contents of both .war files, that they don't contain unwanted files and that files are
 	 in correct places. Source-files should not be in .war file and classes should be WEB-INF/lib folder.
 	5.4 Move the .war files to production server -> test.
