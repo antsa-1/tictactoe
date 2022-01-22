@@ -1,12 +1,11 @@
 # 22.1.2022 <br> <br> TicTacToe: play online with other players or against unfinished AI. Various board sizes.
 
 ## Table of contents
-* [Keywords](#Keywords)
-* [Project goals](#Projectgoals)
+* [Keywords, used technologies and software](#Keywords)
 * [Architecture](#architecture)
-* [Youtube-link](#link)
-* [Disclaimer](#disclaimer)
-* [Technical setup](#Setup)
+* [Youtube-link](#Youtube-link)
+* [Disclaimer](#Disclaimer)
+* [Technical setup](#Technicalsetup])
 
 ## Keywords, used technologies and software
 Windows 10/11 64-bit,<br>
