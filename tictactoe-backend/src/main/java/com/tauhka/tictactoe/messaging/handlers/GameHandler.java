@@ -84,7 +84,8 @@ public class GameHandler {
 
 	public Message removeEndpointOwnTable(TicTacToeEndpoint endpoint) {
 		// Using params would be faster...
-		Optional<Table> table = TicTacToeEndpoint.TABLES.values().stream().filter(taabel -> taabel.getPlayerA().equals(endpoint.getUser())).findFirst();
+		Optional<Table> table = TicTacToeEndpoint.TABLES.values().stream().filter(taabel -> taabel.getPlayerA() != null)
+				.filter(taabel -> taabel.getPlayerA().equals(endpoint.getUser())).findFirst();
 		if (table.isPresent()) {
 			Table removedTable = TicTacToeEndpoint.TABLES.remove(table.get().getId());
 			Message message_ = new Message();
