@@ -37,7 +37,7 @@ Read the whole setup first. This is not a step by step instructions for creating
 Even if you have done some similarish setups before there might( will) come problems to solve.
 
 Upper level tasks in order to get application running:
-1. Create database with a script 
+1. Create database with a script and 2 users manually. 
 2. Setup backend dev env
 3. Use browser to test current version with current UI
 4. Setup UI dev env if required/ want to change UI. Publish changes to DIST-folder using npm-build.
