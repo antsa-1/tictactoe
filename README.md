@@ -3,7 +3,7 @@
 ## Table of contents
 * [Keywords, used technologies and software](#Keywords)
 * [Architecture](#architecture)
-* [Youtube-link](#Youtube-link)
+* [Youtube](#Youtube)
 * [Disclaimer](#Disclaimer)
 * [Technical setup](#Technicalsetup])
 
@@ -27,8 +27,8 @@ Bootstrap 5.1.0
  ![tictactoe](./OverAll.png)
  
  
-## Youtube-link
-There is a video for running this code on local machine. It's available on 
+## Youtube
+There is a video for running this code on local machine. It's available on https://youtu.be/i_MozzKezgo
 
 ## Disclaimer
 Use at your own risk. No warranties. <br>
