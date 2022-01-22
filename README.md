@@ -49,7 +49,7 @@ Upper level tasks in order to get application running:
 1.2 Script "games_portal_v7.sql" is in root folder. It can be run for example from HeidiSQL -> File -> Load SQL file. Read through the script version before running it.<br>
 1.3 TicTacToe.war and Portal.war need user IDs in order to access database. Later on the backend is connected to db using these (resources.xmls in Eclipse). Users can be created directly from MariaDB command line or from HeidiSQL -> Tools -> User manager (HeidiSQL might need some plugin to work).<br>
 Create new users "gameportal-api" for Portal.war and "tictactoe-api" TicTacToe.war. Grant user rights "Execute","Select","Update","Insert" for games_portal database. Same Usernames and passwords will be required later when setting up backend. <br>
-2.0 **Setup backend dev env with Eclipse **<br>
+2 **Setup backend dev env with Eclipse **<br>
 2.1 Import backend projects portal and tictactoe into Eclipse as Maven-projects. 
 2.1.1 Right click portal and tictactoe projects -> Maven-> Update project (to fetch configured deps) <br>
 2.2 Windows-> preferences -> Validations -> Disable JavaScript validations for errors on problems tab <br>
@@ -66,7 +66,7 @@ Create new users "gameportal-api" for Portal.war and "tictactoe-api" TicTacToe.w
 	Find FeedbackEJB.java -> set fileNameLocal and fileNameProd to point what files you want use. <br>
 2.9 Set context root for "portal" and "tictactoe" projects <br>
 ![tictactoe](./TomEEContextRoots.png) <br>
-3. Use browser to test current UI-version <br>
+3. ** Use browser to test current UI-version ** <br>
 3.1 Open browser from address http://localhost:8081/portal/index.html
     Check that port matches your server, check logs from Eclipse if errors occur. <br>
     Check browser console if errors occur.
@@ -76,7 +76,7 @@ Create new users "gameportal-api" for Portal.war and "tictactoe-api" TicTacToe.w
 3.3 Try Login with the credentials. <br>
 3.4 Click play link and check WebSocket connection is opened ws://localhost:8081/tictactoe/ws <br>
 
-4. Setup UI dev env if required to change UI. Sections 1-3 are required to be done before to get backend services working.
+4. ** Setup UI dev env if required to change UI. ** <br>  Sections 1-3 are required to be done before to get backend services working.
 	4.1 UI tries to get services from backend server created in section 2. <br>
   	4.2 Run "npm install" to get packages from folder where package.json is located. Consider installing globally with -g. <br>
   	4.3 Find .env.local file -> set VUE_APP_API_BASE_URL and VUE_APP_WS_URL corresponding where backend services are configured. <br>
