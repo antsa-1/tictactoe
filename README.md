@@ -78,8 +78,9 @@ Plume does not have separate server runtime adapter in Eclipse(2021) so runtime 
 3.3 Try Login with the credentials. <br>
 3.4 Click play link and check WebSocket connection is opened ws://localhost:8081/tictactoe/ws <br>
 
-4. ** Setup UI dev env if required to change UI. ** <br>  Sections 1-3 are required to be done before to get backend services working.
-	4.1 UI tries to get services from backend server created in section 2. <br>
+4. ** Setup UI dev env if required to change UI. ** <br>  
+        4.1 Sections 1-3 are required to be done before to get backend **services** working since they are running in port 8081. 
+	4.1.2 UI tries to get services on many UI-views from backend server created in section 2. <br>
   	4.2 Run "npm install" to get packages from folder where package.json is located. Consider installing globally with -g. <br>
   	4.3 Find .env.local file -> set VUE_APP_API_BASE_URL and VUE_APP_WS_URL corresponding where backend services are configured. <br>
          For example: http://localhost:8081  and websocket ws://localhost:8081/tictactoe/ws <br>
@@ -89,12 +90,13 @@ Plume does not have separate server runtime adapter in Eclipse(2021) so runtime 
   4.5 Since Now running UI in port 8080 -> Backend given cors headers do not match. Find Constants.java file <br>
       In Eclipse, click ctrl+shift+T -> Type Constants.java and select one from TicTacToe project.
 	  Change variable to WEBSOCKET_LOCALHOST_ORIGIN = "http://localhost:8080"; note the port 8080. Restart backend server. <br>
-  4.6 Make wanted changes -> For example Home.vue texts changes.<br>
-  4.7 To build package in order to use it prod environment run "npm run build --prod". Copy created Dist folder contents <br>
-	  to Eclipse Portal-project and delete old/unnecessery UI-files.
+  4.6 Make wanted changes -> For example Home.vue text changes.<br>
+  4.7 To build package in order to use it prod environment run "npm run build. Copy created Dist folder contents <br>
+	  to Eclipse Portal-project and delete old/unnecessery UI-files. Build uses .env.production values and overrides URLs within build.
 
 5. Prod deployment from Eclipse: <br>
-	5.1 Select portal-project ->  File -> Export -> war-file. Check contents inside .war file are in correct places. <br>
+ 5.0 Check that folder src->main->webapp-> contains correct UI-files (Bootstrap, JavaScript files etc.
+	5.1 Select "portal"-project ->  File -> Export -> war-file. Check contents inside .war file are in correct places. <br>
 	5.2 Select tictactoe-project >  File -> Export -> war-file. Check contents inside .war file are in correct places.<br>
 	5.3 Double check inner contents of both .war files, that they don't contain unwanted files and that files are
 	 in correct places. Source-files should not be in .war file and classes should be WEB-INF/lib folder.
