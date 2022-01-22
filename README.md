@@ -13,7 +13,7 @@ Windows 10/11 64-bit,<br>
 MariaDB 10.6.3,<br>
 HeidiSQL 11.3.0.6295, <br>
 Eclipse(Version: 2021-06 (4.20.0) Build id: 20210612-2011), <br>
-TomEE plume 9.0.0-M7, <br>
+TomEE plume 9.0.0-M7, (Milestone version 7) <br>
 OpenJDK 16, (compiler Java 12), <br>
 Visual Studio Code (1.62),<br>
 Node v14.17.3, <br>
@@ -49,11 +49,11 @@ Upper level tasks in order to get application running:
 1.2 Script "games_portal_v7.sql" is in root folder. It can be run for example from HeidiSQL -> File -> Load SQL file. Read through the script version before running it.<br>
 1.3 TicTacToe.war and Portal.war need user IDs in order to access database. Later on the backend is connected to db using these (resources.xmls in Eclipse). Users can be created directly from MariaDB command line or from HeidiSQL -> Tools -> User manager (HeidiSQL might need some plugin to work).<br>
 Create new users "gameportal-api" for Portal.war and "tictactoe-api" TicTacToe.war. Grant user rights "Execute","Select","Update","Insert" for games_portal database. Same Usernames and passwords will be required later when setting up backend. <br>
-2. **Setup backend dev env with Eclipse **<br>
-2.1 Import backend projects portal and tictactoe into Eclipse as Maven-projects. 
+2. **Setup backend dev env with Eclipse** <br>
+2.1 Import backend projects portal and tictactoe into Eclipse as Maven-projects. <br>
 2.1.1 Right click portal and tictactoe projects -> Maven-> Update project (to fetch configured deps) <br>
-2.2 Windows-> preferences -> Validations -> Disable JavaScript validations for errors on problems tab <br>
-2.3 Create server: Click Window -> Show view -> Other -> Servers -> Create new <br>
+2.2 Windows-> preferences -> Validations -> Disable JavaScript validations for errors on problems tab. Clean all projects "Project -> Clean.."<br>
+2.3 No direct errors should occur in problems tab. Create server: Click Window -> Show view -> Other -> Servers -> Create new <br>
 2.3.1 Attach TomEE Plume Server Files from directory where you downloaded them. https://tomee.apache.org/download.html <br>
 2.3.2 ![tictactoe](./ServerInEclipse.png) <br>
 2.4 Start empty server (check logs for errors, no errors should occur). <br>
