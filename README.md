@@ -58,8 +58,8 @@ Create new users "gameportal-api" for Portal.war and "tictactoe-api" TicTacToe.w
 Plume does not have separate server runtime adapter in Eclipse(2021) so runtime enviroment is ok to be Apache Tomcat v.10.0 <br>
 2.3.2 ![tictactoe](./ServerInEclipse.png) <br>
 2.4 Start empty server (check logs for errors, no errors should occur). <br>
-2.4 Add both projects to server (restart server) <br>
-2.5 Open resources.xml in both of the projects. Find "TODO password" and type your passwords from create database section. Restart server.<br>
+2.4 Open resources.xml in both of the projects. Find "TODO password" and type your passwords from create database section.
+2.5 Add both "tictactoe" and "portal" projects to server and clean/restart server. Check console logs for errors after startup. <br>
 2.6 Open browser http://localhost:8081/portal/index.html  <br>
 2.7 Add Server "Open launch configuration" -DServer_Environment="Development" <br>
 ![tictactoe](./AddLauncConfigurationEnvironment.png)
