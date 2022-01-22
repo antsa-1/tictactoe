@@ -54,7 +54,8 @@ Create new users "gameportal-api" for Portal.war and "tictactoe-api" TicTacToe.w
 2.1.1 Right click portal and tictactoe projects -> Maven-> Update project (to fetch configured deps) <br>
 2.2 Windows-> preferences -> Validations -> Disable JavaScript validations for errors on problems tab. Clean all projects "Project -> Clean.."<br>
 2.3 No direct errors should occur in problems tab. Create server: Click Window -> Show view -> Other -> Servers -> Create new <br>
-2.3.1 Attach TomEE Plume Server Files from directory where you downloaded them. https://tomee.apache.org/download.html <br>
+2.3.1 Attach TomEE Plume Server Files from directory where you downloaded them. https://tomee.apache.org/download.html 
+Plume does not have separate server runtime adapter so runtime enviroment is ok to be Apache Tomcat v.10.0 <br>
 2.3.2 ![tictactoe](./ServerInEclipse.png) <br>
 2.4 Start empty server (check logs for errors, no errors should occur). <br>
 2.4 Add both projects to server (restart server) <br>
