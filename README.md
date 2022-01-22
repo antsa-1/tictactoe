@@ -14,7 +14,7 @@ MariaDB 10.6.3,<br>
 HeidiSQL 11.3.0.6295, <br>
 Eclipse(Version: 2021-06 (4.20.0) Build id: 20210612-2011), <br>
 TomEE plume 9.0.0-M7, (Milestone version 7) <br>
-OpenJDK 16, (compiler Java 12), <br>
+Java OpenJDK 16, (compiler Java 12), <br>
 Visual Studio Code (1.62),<br>
 Node v14.17.3, <br>
 Vue 3, <br>
@@ -30,7 +30,7 @@ Bootstrap 5.1.0
 
 ## Disclaimer
 Use at your own risk. No warranties. <br>
-Using, testing, playing, deploying any parts of the software is done with your own responsibility and risk. Thus there is no guarantee that this software will work as intended in your environment. Software and instructions might contain bugs/errors.
+Using, testing, playing, running scripts, installing, deploying any parts of the software is done with your own responsibility and risk. Thus there is no guarantee that this software will work as intended in your environment. Software and instructions might contain bugs/errors.
 
 ## Technical setup
 Read the whole setup first. This is not a step by step instructions for creating workspace. <br>
@@ -82,17 +82,18 @@ Plume does not have separate server runtime adapter in Eclipse(2021) so runtime 
         4.1 Sections 1-3 are required to be done before to get backend **services** working since they are running in port 8081. <br>
 	4.1.2 UI tries to get services on many UI-views from backend server created in section 2. <br>
   	4.2 Visual studio code can be used to edit UI-files. -> Import "frontend" folder to VsCode. <br>
-  	4.3 Run "npm install" to get packages from folder where package.json is located. Latest versions of the package check? Consider installing globally with -g. <br>
-  	4.4 Find .env.local file -> set VUE_APP_API_BASE_URL and VUE_APP_WS_URL corresponding where backend services are configured. <br>
+  	4.3 Vue-cli has been used within development -> https://cli.vuejs.org/guide/installation.html
+  	4.4 Run "npm install" to get packages from folder where package.json is located. Latest versions of the package check? Consider installing globally with -g. <br>
+  	4.5 Find .env.local file -> set VUE_APP_API_BASE_URL and VUE_APP_WS_URL corresponding where backend services are configured. <br>
          For example: http://localhost:8081  and websocket ws://localhost:8081/tictactoe/ws <br>
-  	4.5 Backend should give "CORS-headers" accordingly, browser makes http OPTIONS call since port 8080!=8081 <br>
+  	4.6 Backend should give "CORS-headers" accordingly, browser makes http OPTIONS call since port 8080!=8081 <br>
   
-  4.6 Run "npm run serve" to start dev server. Vue-App runs default at http://localhost:8080/ (note port) <br>
-  4.7 Since Now running UI in port 8080 -> Backend given cors headers do not match. Find Constants.java file <br>
+  4.7 Run "npm run serve" to start dev server. Vue-App runs default at http://localhost:8080/ (note port) <br>
+  4.8 Since Now running UI in port 8080 -> Backend given cors headers do not match. Find Constants.java file <br>
       In Eclipse, click ctrl+shift+T -> Type Constants.java and select one from TicTacToe project.
 	  Change variable to WEBSOCKET_LOCALHOST_ORIGIN = "http://localhost:8080"; note the port 8080. Restart backend server. <br>
-  4.8 Make wanted changes -> For example Home.vue text changes.<br>
-  4.9 To build package in order to use it prod environment run "npm run build. Copy created Dist folder contents <br>
+  4.9 Make wanted changes -> For example Home.vue text changes.<br>
+  4.10 To build package in order to use it prod environment run "npm run build. Copy created Dist folder contents <br>
 	  to Eclipse Portal-project and delete old/unnecessery UI-files. Build uses .env.production values and overrides URLs within build.
 
 5. Prod deployment from Eclipse: <br>
