@@ -72,7 +72,7 @@ Plume does not have separate server runtime adapter in Eclipse(2021) so runtime 
 3.1 Open browser from address http://localhost:8081/portal/index.html
     Check that port matches your server, check logs from Eclipse if errors occur. <br>
     Check browser console if errors occur.
-    UI should open up now.
+    UI should open up now. <br> Test WebSocket connection from "play" link. If not working check "tictactoe"-project file Constants.java and variable WEBSOCKET_LOCALHOST_ORIGIN matches with browser port.
 3.2 Try registering new username. Username and password are not allowed to be the same. Check browser dev-tools
 	that address is http://localhost:8081/portal/api/user/register  <br>
 3.3 Try Login with the credentials. <br>
