@@ -1,4 +1,4 @@
-# TicTacToe: play online with other players or against unfinished AI. Various board sizes.
+# 22.1.2022 <br> <br> TicTacToe: play online with other players or against unfinished AI. Various board sizes.
 
 ## Table of contents
 * [Keywords](#Keywords)
@@ -20,34 +20,23 @@ Node v14.17.3, <br>
 Vue 3, <br>
 Vuex 4.0.2,
 Vue-router 4.0.11, <br>
-Vue-cli: @vue/cli 4.5.15
-
-## Project goals
-
-**Frontend:** <br>
-Study html canvas using Vue wrapper with TypeScript. Using .vue files. <br>
-**Backend:** <br>
-Study new backend server and what is going on with latest Java versions.<br>
-**Database:** <br>
-Create simple SQL-based database to backup the gaming. Check password storing in database.<br>
-**Have some fun!**<br>
+Vue-cli: @vue/cli 4.5.15 <br>
+Bootstrap 5.1.0
 
 ## Architecture
 
  ![tictactoe](./OverAll.png)
  
-##link
-www.
 
 ## Disclaimer
-Use at your own risk. No warranties. 
+Use at your own risk. No warranties. <br>
 Using, testing, playing, deploying any parts of the software is done with your own responsibility and risk. Software and instructions might contain bugs/errors.
 
 ## Technical setup
 Read the whole setup first. This is not a step by step instructions for creating workspace. <br>
 Even if you have done some similarish setups before there might( will) come problems to solve.
 
-Big steps:
+Upper level tasks in order to get application running:
 1. Create database with a script 
 2. Setup backend dev env
 3. Use browser to test current version with current UI
@@ -55,8 +44,10 @@ Big steps:
 5. Prod-publish: Copy DIST-folder to Eclipse portal-project. Deploy Portal.war and TicTacToe.war to server running prod TomEE and database.
    Set Server launch environment to  -DServer_Environment="Production" Compare to  2.7
 ---
-1. Create database with script -> Script "LocalDbSetup.sql" is in this (main) folder
-2. Backend dev environment with Eclipse <br>
+1. **Create database with script** <br>
+1.1  Db-view from HeidiSql <br> ![tictactoe](./DatabaseViewFromHeidiSQL.png)  <br>
+1.2 Script "LocalDbSetup.sql" is in this (main) folder
+2.0 **Setup backend dev env with Eclipse **<br>
 2.1 Import backend projects portal and tictactoe into Eclipse as Maven-projects. 
 2.1.1 Right click portal and tictactoe projects -> Maven-> Update project (to fetch configured deps) <br>
 2.2 Windows-> preferences -> Validations -> Disable JavaScript validations for errors on problems tab <br>
