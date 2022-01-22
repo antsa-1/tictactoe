@@ -49,7 +49,7 @@ Upper level tasks in order to get application running:
 1.2 Script "games_portal_v7.sql" is in root folder. It can be run for example from HeidiSQL -> File -> Load SQL file. Read through the script version before running it.<br>
 1.3 TicTacToe.war and Portal.war need user IDs in order to access database. Later on the backend is connected to db using these (resources.xmls in Eclipse). Users can be created directly from MariaDB command line or from HeidiSQL -> Tools -> User manager (HeidiSQL might need some plugin to work).<br>
 Create new users "gameportal-api" for Portal.war and "tictactoe-api" TicTacToe.war. Grant user rights "Execute","Select","Update","Insert" for games_portal database. Same Usernames and passwords will be required later when setting up backend. <br>
-2 **Setup backend dev env with Eclipse **<br>
+2. **Setup backend dev env with Eclipse **<br>
 2.1 Import backend projects portal and tictactoe into Eclipse as Maven-projects. 
 2.1.1 Right click portal and tictactoe projects -> Maven-> Update project (to fetch configured deps) <br>
 2.2 Windows-> preferences -> Validations -> Disable JavaScript validations for errors on problems tab <br>
