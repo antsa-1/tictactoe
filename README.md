@@ -30,7 +30,7 @@ Bootstrap 5.1.0
 
 ## Disclaimer
 Use at your own risk. No warranties. <br>
-Using, testing, playing, deploying any parts of the software is done with your own responsibility and risk. Software and instructions might contain bugs/errors.
+Using, testing, playing, deploying any parts of the software is done with your own responsibility and risk. Thus there is no guarantee that this software will work in your environment. Software and instructions might contain bugs/errors.
 
 ## Technical setup
 Read the whole setup first. This is not a step by step instructions for creating workspace. <br>
