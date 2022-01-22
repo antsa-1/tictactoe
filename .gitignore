@@ -41,3 +41,11 @@ $RECYCLE.BIN/
 *.zip
 *.tar.gz
 *.rar
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+node_modules
