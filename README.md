@@ -30,7 +30,7 @@ Bootstrap 5.1.0
 
 ## Disclaimer
 Use at your own risk. No warranties. <br>
-Using, testing, playing, deploying any parts of the software is done with your own responsibility and risk. Thus there is no guarantee that this software will work in your environment. Software and instructions might contain bugs/errors.
+Using, testing, playing, deploying any parts of the software is done with your own responsibility and risk. Thus there is no guarantee that this software will work as intended in your environment. Software and instructions might contain bugs/errors.
 
 ## Technical setup
 Read the whole setup first. This is not a step by step instructions for creating workspace. <br>
@@ -55,7 +55,7 @@ Create new users "gameportal-api" for Portal.war and "tictactoe-api" TicTacToe.w
 2.2 Windows-> preferences -> Validations -> Disable JavaScript validations for errors on problems tab. Clean all projects "Project -> Clean.."<br>
 2.3 No direct errors should occur in problems tab. Create server: Click Window -> Show view -> Other -> Servers -> Create new <br>
 2.3.1 Attach TomEE Plume Server Files from directory where you downloaded them. https://tomee.apache.org/download.html 
-Plume does not have separate server runtime adapter so runtime enviroment is ok to be Apache Tomcat v.10.0 <br>
+Plume does not have separate server runtime adapter in Eclipse(2021) so runtime enviroment is ok to be Apache Tomcat v.10.0 <br>
 2.3.2 ![tictactoe](./ServerInEclipse.png) <br>
 2.4 Start empty server (check logs for errors, no errors should occur). <br>
 2.4 Add both projects to server (restart server) <br>
@@ -63,6 +63,7 @@ Plume does not have separate server runtime adapter so runtime enviroment is ok 
 2.6 Open browser http://localhost:8081/portal/index.html  <br>
 2.7 Add Server "Open launch configuration" -DServer_Environment="Development" <br>
 ![tictactoe](./AddLauncConfigurationEnvironment.png)
+![tictactoe](./ServerLaunchConfig.png)
 2.8 Set Feedback file path and name. Feedbacks go to file appending it endlessly. Biggest file size not configured.
 	Find FeedbackEJB.java -> set fileNameLocal and fileNameProd to point what files you want use. <br>
 2.9 Set context root for "portal" and "tictactoe" projects <br>
@@ -84,7 +85,7 @@ Plume does not have separate server runtime adapter so runtime enviroment is ok 
          For example: http://localhost:8081  and websocket ws://localhost:8081/tictactoe/ws <br>
   	4.3.1 Backend should give "CORS-headers" accordingly, browser makes http OPTIONS call since port 8080!=8081 <br>
   
-  4.4 Run "npm run serve -o" to start dev server. Vue-App runs default at http://localhost:8080/ (note port) <br>
+  4.4 Run "npm run serve" to start dev server. Vue-App runs default at http://localhost:8080/ (note port) <br>
   4.5 Since Now running UI in port 8080 -> Backend given cors headers do not match. Find Constants.java file <br>
       In Eclipse, click ctrl+shift+T -> Type Constants.java and select one from TicTacToe project.
 	  Change variable to WEBSOCKET_LOCALHOST_ORIGIN = "http://localhost:8080"; note the port 8080. Restart backend server. <br>
