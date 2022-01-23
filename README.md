@@ -1,4 +1,5 @@
-# 22.1.2022 <br> <br> TicTacToe: play online with other players or against unfinished AI. Various board sizes.
+### 22.1.2022 
+# TicTacToe: play online with other players or against unfinished AI. Various board sizes.
 
 ## Table of contents
 * [Keywords, used technologies and software](#Keywords)
@@ -17,8 +18,9 @@ Java OpenJDK 16, (compiler Java 12), <br>
 Visual Studio Code (1.62),<br>
 Node v14.17.3, <br>
 Vue 3, <br>
-Vuex 4.0.2,
+Vuex 4.0.2,<br>
 Vue-router 4.0.11, <br>
+TypeScript 4.3.5,<br>
 Vue-cli: @vue/cli 4.5.15 <br>
 Bootstrap 5.1.0
 
