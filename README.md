@@ -3,28 +3,11 @@
 ### Built using Jakarta EE, WebSockets, Html Canvas, JS.
 
 ## Table of contents
-* [Keywords, used technologies and software](#Keywords)
 * [Architecture](#architecture)
 * [Youtube](#Youtube)
 * [Disclaimer](#Disclaimer)
 * [Technical setup](#Technicalsetup])
 
-## Keywords, used technologies and software
-Windows 10/11 64-bit,<br>
-MariaDB 10.6.3,<br>
-HeidiSQL 11.3.0.6295, <br>
-Eclipse(Version: 2021-06 (4.20.0) Build id: 20210612-2011), <br>
-TomEE plume 9.0.0-M7, (Milestone version 7)  <br>
-Java OpenJDK 16, (compiler Java 12), <br>
-Visual Studio Code (1.62),<br>
-Node v14.17.3, <br>
-WebSocket, <br>
-Vue 3, <br>
-Vuex 4.0.2,<br>
-Vue-router 4.0.11, <br>
-TypeScript 4.3.5,<br>
-Vue-cli: @vue/cli 4.5.15 <br>
-Bootstrap 5.1.0
 
 ## Architecture
 
