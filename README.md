@@ -17,6 +17,7 @@ TomEE plume 9.0.0-M7, (Milestone version 7) <br>
 Java OpenJDK 16, (compiler Java 12), <br>
 Visual Studio Code (1.62),<br>
 Node v14.17.3, <br>
+WebSocket <br>
 Vue 3, <br>
 Vuex 4.0.2,<br>
 Vue-router 4.0.11, <br>
