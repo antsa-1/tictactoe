@@ -7,13 +7,12 @@ import com.tauhka.tictactoe.game.util.TicTacToeBoardAdapter;
 import jakarta.json.bind.Jsonb;
 import jakarta.json.bind.JsonbBuilder;
 import jakarta.json.bind.JsonbConfig;
-import jakarta.websocket.Decoder;
 import jakarta.websocket.EncodeException;
 import jakarta.websocket.Encoder;
 
 public class MessageEncoder implements Encoder.Text<Message> {
 
-	private static final Logger LOGGER = Logger.getLogger(Decoder.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(MessageEncoder.class.getName());
 	private final JsonbConfig ticTacToeConfig = new JsonbConfig().withAdapters(new TicTacToeBoardAdapter());
 
 	@Override

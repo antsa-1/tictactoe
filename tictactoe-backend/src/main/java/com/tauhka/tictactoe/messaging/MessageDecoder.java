@@ -9,7 +9,7 @@ import jakarta.websocket.Decoder;
 
 public class MessageDecoder implements Decoder.Text<Message> {
 
-	private static final Logger LOGGER = Logger.getLogger(Decoder.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(MessageDecoder.class.getName());
 
 	@Override
 	public void destroy() {
