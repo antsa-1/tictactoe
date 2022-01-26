@@ -6,6 +6,7 @@
 * [Architecture](#architecture)
 * [Youtube](#Youtube)
 * [Disclaimer](#Disclaimer)
+* [Keywords, used technologies and software](#Keywords)
 * [Technical setup](#Technicalsetup])
 
 
@@ -20,6 +21,22 @@ There is a video for running this code on local machine. It's available on https
 ## Disclaimer
 Use at your own risk. No warranties. <br>
 Using, testing, playing, running scripts, installing, deploying any parts of the software is done with your own responsibility and risk. Thus there is no guarantee that this software will work as intended in your environment. Software and instructions might contain bugs/errors.
+
+## Keywords, used technologies and software
+Windows 10/11 64-bit,<br>
+MariaDB 10.6.3,<br>
+HeidiSQL 11.3.0.6295, <br>
+Eclipse(Version: 2021-06 (4.20.0) Build id: 20210612-2011), <br>
+TomEE plume 9.0.0-M7, (Milestone version 7) <br>
+Java OpenJDK 16, (compiler Java 12), <br>
+Visual Studio Code (1.62),<br>
+Node v14.17.3, <br>
+Vue 3, <br>
+Vuex 4.0.2,<br>
+Vue-router 4.0.11, <br>
+TypeScript 4.3.5,<br>
+Vue-cli: @vue/cli 4.5.15 <br>
+Bootstrap 5.1.0
 
 ## Technical setup
 Here are common level workspace setup instructions. <br>
