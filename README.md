@@ -1,5 +1,5 @@
 ### 22.1.2022 
-# TicTacToe: play online with other players or against unfinished AI. Various board sizes.
+# TicTacToe: play online with other players or against unfinished AI. Various board sizes. <br> Built using Jakarta EE, WebSockets, Html Canvas, JS.
 
 ## Table of contents
 * [Keywords, used technologies and software](#Keywords)
@@ -13,11 +13,11 @@ Windows 10/11 64-bit,<br>
 MariaDB 10.6.3,<br>
 HeidiSQL 11.3.0.6295, <br>
 Eclipse(Version: 2021-06 (4.20.0) Build id: 20210612-2011), <br>
-TomEE plume 9.0.0-M7, (Milestone version 7) <br>
+TomEE plume 9.0.0-M7, (Milestone version 7)  <br>
 Java OpenJDK 16, (compiler Java 12), <br>
 Visual Studio Code (1.62),<br>
 Node v14.17.3, <br>
-WebSocket <br>
+WebSocket, <br>
 Vue 3, <br>
 Vuex 4.0.2,<br>
 Vue-router 4.0.11, <br>
@@ -38,16 +38,15 @@ Use at your own risk. No warranties. <br>
 Using, testing, playing, running scripts, installing, deploying any parts of the software is done with your own responsibility and risk. Thus there is no guarantee that this software will work as intended in your environment. Software and instructions might contain bugs/errors.
 
 ## Technical setup
-Read the whole setup first. This is not a step by step instructions for creating workspace. <br>
-Even if you have done some similarish setups before there might( will) come problems to solve.
+Here are common level workspace setup instructions. <br>
 
 Upper level tasks in order to get application running:
-1. Create database with a script and 2 users manually. 
+1. Create database
 2. Setup backend dev env
 3. Use browser to test current version with current UI
-4. Setup UI dev env if required/ want to change UI. Publish changes to DIST-folder using npm-build.
-5. Prod-publish: Copy DIST-folder to Eclipse portal-project. Deploy Portal.war and TicTacToe.war to server running prod TomEE and database.
-   Set Server launch environment to  -DServer_Environment="Production" Compare to  2.7
+4. Setup UI dev env if required/ want to change UI. Publish changes to DIST-folder using npm-build
+5. Publish to production server.
+
 ---
 1. **Create database with script** <br>
 1.1  Db-view from HeidiSql <br> ![tictactoe](./DatabaseViewFromHeidiSQL.png)  <br>
