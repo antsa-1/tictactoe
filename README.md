@@ -11,7 +11,7 @@
 
 ## Architecture
 
- ![tictactoe](./OverAll.png)
+ ![tictactoe](./workspace-setup/OverAll.png)
  
  
 ## Youtube
@@ -33,7 +33,7 @@ Upper level tasks in order to get application running:
 
 ---
 1. **Create database with script** <br>
-1.1  Db-view from HeidiSql <br> ![tictactoe](./DatabaseViewFromHeidiSQL.png)  <br>
+1.1  Db-view from HeidiSql <br> ![tictactoe](./workspace-setup/DatabaseViewFromHeidiSQL.png)  <br>
 1.2 Script "games_portal_v7.sql" is in root folder. It can be run for example from HeidiSQL -> File -> Load SQL file. Read through the script version before running it.<br>
 1.3 TicTacToe.war and Portal.war need user IDs in order to access database. Later on the backend is connected to db using these (resources.xmls in Eclipse). Users can be created directly from MariaDB command line or from HeidiSQL -> Tools -> User manager (HeidiSQL might need some plugin to work).<br>
 Create new users "gameportal-api" for Portal.war and "tictactoe-api" TicTacToe.war. Grant user rights "Execute","Select","Update","Insert" for games_portal database. Same Usernames and passwords will be required later when setting up backend. <br>
@@ -44,18 +44,18 @@ Create new users "gameportal-api" for Portal.war and "tictactoe-api" TicTacToe.w
 2.3 No direct errors should occur in problems tab. Create server: Click Window -> Show view -> Other -> Servers -> Create new <br>
 2.3.1 Attach TomEE Plume Server Files from directory where you downloaded them. https://tomee.apache.org/download.html 
 Plume does not have separate server runtime adapter in Eclipse(2021) so runtime enviroment is ok to be Apache Tomcat v.10.0 <br>
-2.3.2 ![tictactoe](./ServerInEclipse.png) <br>
+2.3.2 ![tictactoe](./workspace-setup/ServerInEclipse.png) <br>
 2.4 Start empty server (check logs for errors, no errors should occur). <br>
 2.4 Open resources.xml in both of the projects. Find "TODO password" and type your passwords from create database section.
 2.5 Add both "tictactoe" and "portal" projects to server and clean/restart server. Check console logs for errors after startup. <br>
 2.6 Open browser http://localhost:8081/portal/index.html  <br>
 2.7 Add Server "Open launch configuration" -DServer_Environment="Development" <br>
-![tictactoe](./AddLauncConfigurationEnvironment.png)
-![tictactoe](./ServerLaunchConfig.png)
+![tictactoe](./workspace-setup/AddLauncConfigurationEnvironment.png)
+![tictactoe](./workspace-setup/ServerLaunchConfig.png)
 2.8 Set Feedback file path and name. Feedbacks go to file appending it endlessly. Biggest file size not configured.
 	Find FeedbackEJB.java -> set fileNameLocal and fileNameProd to point what files you want use. <br>
 2.9 Set context root for "portal" and "tictactoe" projects <br>
-![tictactoe](./TomEEContextRoots.png) <br>
+![tictactoe](./workspace-setup/TomEEContextRoots.png) <br>
 3. ** Use browser to test current UI-version ** <br>
 3.1 Open browser from address http://localhost:8081/portal/index.html
     Check that port matches your server, check logs from Eclipse if errors occur. <br>
