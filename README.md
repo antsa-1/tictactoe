@@ -1,5 +1,6 @@
 ### 22.1.2022 
-# TicTacToe: play online with other players or against unfinished AI. Various board sizes. <br> Built using Jakarta EE, WebSockets, Html Canvas, JS.
+# TicTacToe: play online with other players or against unfinished AI. Various board sizes. <br> 
+### Built using Jakarta EE, WebSockets, Html Canvas, JS.
 
 ## Table of contents
 * [Keywords, used technologies and software](#Keywords)
