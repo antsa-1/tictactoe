@@ -1,3 +1,5 @@
+This repo is no longer maintained. Current Development repo is /games
+
 ### 22.1.2022 
 # TicTacToe: play online with other players or against unfinished AI. Various board sizes. <br> 
 ### Built using Jakarta EE, WebSockets, Html Canvas, JS.
